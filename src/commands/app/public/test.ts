@@ -1,0 +1,22 @@
+import Discord from "discord.js";
+
+const data = {
+    name: "test",
+    description: "test",
+    cooldown: 10,
+    permissions: [],
+    execute(interaction: any) {
+        const embed = new Discord.EmbedBuilder()
+            .setColor("Blue")
+            .setTitle("Bot Çalışıyor")
+            .setDescription(`Bot çalışıyor.`)
+        interaction.reply({ embeds: [embed] });
+    }
+}
+
+const slashData = {
+    name: data.name,
+    description: data.description
+}
+
+export { data, slashData }
